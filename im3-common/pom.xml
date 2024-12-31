@@ -7,7 +7,141 @@
     <groupId>com.zxx17</groupId>
     <artifactId>im3-common</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <description>im3 公共代码</description>
 
+    <modules>
+        <module>im3-common-domain</module>
+    </modules>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring.boot.version>3.2.4</spring.boot.version>
+        <mybatisplus.version>3.5.9</mybatisplus.version>
+        <fastjson2.version>2.0.53</fastjson2.version>
+        <velocity.version>2.4.1</velocity.version>
+        <ehcache.version>3.3.1</ehcache.version>
+        <swagger.version>3.0.0</swagger.version>
+        <hutool.version>5.8.35</hutool.version>
+        <druid.version>1.2.24</druid.version>
+        <alipay.version>3.7.110.ALL</alipay.version>
+        <zxing.version>3.3.3</zxing.version>
+        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <poi.version>5.3.0</poi.version>
+        <commons-io.version>2.18.0</commons-io.version>
+        <dom4j.version>2.1.4</dom4j.version>
+        <jackson-mapper-asl.version>1.9.13</jackson-mapper-asl.version>
+        <interceptor-api.version>1.2</interceptor-api.version>
+        <spring-security-jwt.version>1.1.1.RELEASE</spring-security-jwt.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 导入Spring Boot的依赖管理 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- MyBatis Plus Spring Boot Starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+
+            <!-- Apache Commons Lang3 提供实用工具方法 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!-- Alibaba Fastjson2 JSON处理库 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <!-- Alibaba Druid 数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- HTML模板引擎 Velocity -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+            <!-- Swagger API 文档生成工具 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <!-- Hutool 工具集 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- Apache POI 操作Excel -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <!-- Commons IO 文件操作工具 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <!-- DOM4J XML解析器 -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+
+            <!-- Jackson Mapper ASL JSON处理库（旧版） -->
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>${jackson-mapper-asl.version}</version>
+            </dependency>
+
+            <!-- Java EE Interceptor API -->
+            <dependency>
+                <groupId>javax.interceptor</groupId>
+                <artifactId>javax.interceptor-api</artifactId>
+                <version>${interceptor-api.version}</version>
+            </dependency>
+
+            <!-- Spring Security JWT 支持 -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>${spring-security-jwt.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
