@@ -7,7 +7,7 @@
     <groupId>com.zxx17</groupId>
     <artifactId>im3-sdk</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>im3 及时通讯sdk</description>
+    <description>im3 即时通信服务sdk</description>
 
 
 </project>
